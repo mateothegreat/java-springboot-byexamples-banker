@@ -1,4 +1,3 @@
-import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 
@@ -20,17 +19,17 @@ public class Bank {
 //
 //        System.out.println(accounts);
 
-        Optional<List<Account>> accounts = Vault.getVault();
-
-        if (accounts.isPresent()) {
-
-            System.out.println(accounts);
-
-        } else {
-
-            System.out.println("Couldn't load vault.csv!");
-
-        }
+//        Optional<List<Account>> accounts = Vault.getVault();
+//
+//        if (accounts.isPresent()) {
+//
+//            System.out.println(accounts);
+//
+//        } else {
+//
+//            System.out.println("Couldn't load vault.csv!");
+//
+//        }
 
         Scanner scanner = new Scanner(System.in);
 
