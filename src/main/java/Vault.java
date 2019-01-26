@@ -8,12 +8,13 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Vault {
 
     private static final String VAULT_FILENAME = "vault.csv";
 
-    public static List<Account> getVault() {
+    public static Optional<List<Account>> getVault() {
 
         List<Account> accounts = new ArrayList<>();
 
@@ -43,7 +44,7 @@ public class Vault {
 
         }
 
-        return accounts;
+        return accounts.size() > 0 ? Optional.of(accounts) : Optional.empty();
 
     }
 

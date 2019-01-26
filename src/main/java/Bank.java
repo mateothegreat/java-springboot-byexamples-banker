@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Optional;
 
 public class Bank {
 
@@ -18,9 +19,18 @@ public class Bank {
 //
 //        System.out.println(accounts);
 
-        List<Account> accounts = Vault.getVault();
+        Optional<List<Account>> accounts = Vault.getVault();
 
-        System.out.println(accounts);
+        if (accounts.isPresent()) {
+
+            System.out.println(accounts);
+
+        } else {
+
+            System.out.println("Couldn't load vault.csv!");
+
+        }
+
 
     }
 
