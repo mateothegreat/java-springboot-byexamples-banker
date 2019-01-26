@@ -31,16 +31,28 @@ public class Bank {
 //
 //        }
 
+        //
+        // Start listening for inputs..
+        //
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter your account name: ");
 
+        //
+        // Take whatever is typed before hitting enter
+        //
         String accountName = scanner.nextLine();
 
         System.out.println("*** Retrieving the account name\"" + accountName + "\"");
 
+        //
+        // Try to get the account by name
+        //
         Optional<Account> optionalAccount = Vault.getAccountByName(accountName);
 
+        //
+        // Check to make sure the account exists
+        //
         if (optionalAccount.isPresent()) {
 
             System.out.println("*** Your account funds are: " + optionalAccount.get().getAccountFunds());
