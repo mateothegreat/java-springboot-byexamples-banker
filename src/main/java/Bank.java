@@ -1,5 +1,6 @@
 import java.util.List;
 import java.util.Optional;
+import java.util.Scanner;
 
 public class Bank {
 
@@ -31,6 +32,25 @@ public class Bank {
 
         }
 
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter your account name: ");
+
+        String accountName = scanner.nextLine();
+
+        System.out.println("*** Retrieving the account name\"" + accountName + "\"");
+
+        Optional<Account> optionalAccount = Vault.getAccountByName(accountName);
+
+        if (optionalAccount.isPresent()) {
+
+            System.out.println("*** Your account funds are: " + optionalAccount.get().getAccountFunds());
+
+        } else {
+
+            System.out.println("*** COULD NOT LOCATE ACCOUNT NAME!");
+
+        }
 
     }
 

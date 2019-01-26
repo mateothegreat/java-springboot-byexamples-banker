@@ -48,4 +48,26 @@ public class Vault {
 
     }
 
+    public static Optional<Account> getAccountByName(String name) {
+
+        Optional<List<Account>> accounts = getVault();
+
+        if (accounts.isPresent()) {
+
+            for (int i = 0; i < accounts.get().size(); i++) {
+
+                if (accounts.get().get(i).getAccountName().equals(name)) {
+
+                    return Optional.of(accounts.get().get(i));
+
+                }
+
+            }
+
+        }
+
+        return Optional.empty();
+
+    }
+
 }
