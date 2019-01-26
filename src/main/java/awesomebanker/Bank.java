@@ -1,3 +1,5 @@
+package awesomebanker;
+
 import java.util.Optional;
 import java.util.Scanner;
 
@@ -5,11 +7,11 @@ public class Bank {
 
     public static void main(String[] args) {
 
-//        List<Account> accounts = new ArrayList();
+//        List<awesomebanker.Account> accounts = new ArrayList();
 //
 //        for (int index = 1; index <= 20; index++) {
 //
-//            Account newAccount = new Account();
+//            awesomebanker.Account newAccount = new awesomebanker.Account();
 //
 //            newAccount.accountName = "my account";
 //
@@ -19,7 +21,7 @@ public class Bank {
 //
 //        System.out.println(accounts);
 
-//        Optional<List<Account>> accounts = Vault.getVault();
+//        Optional<List<awesomebanker.Account>> accounts = awesomebanker.Vault.getVault();
 //
 //        if (accounts.isPresent()) {
 //

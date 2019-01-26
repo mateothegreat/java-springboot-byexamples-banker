@@ -1,3 +1,5 @@
+package awesomebanker;
+
 public class Account {
 
     private String accountName;

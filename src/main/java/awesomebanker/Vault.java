@@ -1,3 +1,5 @@
+package awesomebanker;
+
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
@@ -16,7 +18,7 @@ public class Vault {
 
     //
     // This method retrieves the data out of vault.csv, loops through each item
-    // and creates an Account Object for each.
+    // and creates an awesomebanker.Account Object for each.
     //
     // It returns an Optional Object which is empty (checked by .isPresent()) if
     // vault.csv cannot be loaded instead of crashing.
@@ -38,7 +40,7 @@ public class Vault {
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT.withFirstRecordAsHeader().withIgnoreHeaderCase().withTrim());
 
             //
-            // Loop through each line in the CSV file and create an Account Object
+            // Loop through each line in the CSV file and create an awesomebanker.Account Object
             // for each.
             //
             // We then add it to the List using .add()
